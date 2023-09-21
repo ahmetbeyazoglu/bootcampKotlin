@@ -2,6 +2,7 @@ package com.herpestes.kotlin.Day2.OOP
 
 class Cars (var color: String, var speed: Int, var isitwork: Boolean){
 
+
     init {
         println("Constructor çalıştı")
     }
