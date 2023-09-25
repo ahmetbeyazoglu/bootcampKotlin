@@ -7,8 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="anaRenk">#CB2020</color>
-    <color name="anaRenk">#BF2020</color>
+    <color name="anaRenkoyu">#BF2020</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="white">#636363</color>
+    <color name="grey">#636363</color>
 
 </resources>
