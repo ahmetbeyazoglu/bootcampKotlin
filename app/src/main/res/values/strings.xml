@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">bootcamp_kotlin</string>
+    <string name="app_name">Pizza</string>
     <string name="pizzaBaslik">Beef Cheese</string>
     <string name="peynirYazi">Cheese</string>
     <string name="sucukYazi">Sausage</string>
