@@ -15,6 +15,9 @@
             app:destination="@id/detailFragment"
             app:popUpTo="@id/mainPageFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/bottomsheetgecis"
+            app:destination="@id/bottomSheetFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -46,4 +49,9 @@
         android:name="com.herpestes.navigationcomponent.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.herpestes.navigationcomponent.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" />
 </navigation>

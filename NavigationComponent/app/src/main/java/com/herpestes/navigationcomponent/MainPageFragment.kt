@@ -24,6 +24,10 @@ class MainPageFragment : Fragment() {
 
         }
 
+        binding.goster.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.bottomsheetgecis)
+        }
+
         return binding.root
     }
 
