@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_main_page" >
         <action
             android:id="@+id/detayGecis"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment"
+            app:popUpTo="@id/mainPageFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -39,4 +41,9 @@
             android:name="product"
             app:argType="com.herpestes.navigationcomponent.Product" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.herpestes.navigationcomponent.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>
