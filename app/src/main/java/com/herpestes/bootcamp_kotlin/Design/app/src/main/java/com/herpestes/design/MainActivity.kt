@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
 
         //yazılım kısmında R harfi res klasörünü temsil eder.
         //xml kısmında @ işareti res klasöürünü temsil eder
-
+        // Left - start leading
+        //right - end - trailing
     }
 }
