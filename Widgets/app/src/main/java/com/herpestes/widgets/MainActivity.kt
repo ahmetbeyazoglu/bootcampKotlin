@@ -8,7 +8,13 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
+import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.android.material.timepicker.MaterialTimePicker
+import com.google.android.material.timepicker.TimeFormat
 import com.herpestes.widgets.databinding.ActivityMainBinding
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -85,6 +91,34 @@ class MainActivity : AppCompatActivity() {
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
+
+        //Clock and Date
+
+        binding.buttonSaat.setOnClickListener {
+            val tp = MaterialTimePicker.Builder()
+                .setTitleText("Saat kaç")
+                .setTimeFormat(TimeFormat.CLOCK_24H)
+                .build()
+
+            tp.show(supportFragmentManager, "Saat")
+
+            tp.addOnPositiveButtonClickListener {
+                binding.editTextTextSaat.setText("${tp.hour} : ${tp.minute}")
+            }
+        }
+        binding.buttonTarih.setOnClickListener {
+            val dp = MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Tarih Seç")
+                .build()
+
+            dp.show(supportFragmentManager, "Tarih")
+
+            dp.addOnPositiveButtonClickListener {
+                val df = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                val tarih = df.format(it)
+                binding.editTextTarih.setText(tarih)
+            }
+        }
 
 
         //Switch
